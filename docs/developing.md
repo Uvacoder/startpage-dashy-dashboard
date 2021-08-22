@@ -2,7 +2,7 @@
 # Developing
 
 This article outlines how to get Dashy running in a development environment, and outlines the basics of the architecture.
-If you're adding new features, you may want to check out the [Development Guides](./docs/development-guides.md) docs, for tutorials covering basic tasks.
+If you're adding new features, you may want to check out the [Development Guides](./docs/Development-Guides.md) docs, for tutorials covering basic tasks.
 
 - [Setting up the Development Environment](#setting-up-the-dev-environment)
 - [Resources for Beginners](#resources-for-beginners)
@@ -41,7 +41,7 @@ There is also:
 Using the Vue CLI:
 - The app is build with Vue, and uses the [Vue-CLI Service](https://cli.vuejs.org/guide/cli-service.html) for basic commands.
 - If you have [NPX](https://github.com/npm/npx) installed, then you can invoke the Vue CLI binary using `npx vue-cli-service [command]`
-- Vue also has a GUI environment that can be used for basic project management, and may be useful for beginners, this can be started by running `vue ui`, and opening up `http://localhost:8000`
+- Vue also has a GUI environment that can be used for basic project Management, and may be useful for beginners, this can be started by running `vue ui`, and opening up `http://localhost:8000`
 
 Note:
 - If you are using NPM, replace `yarn` with `npm run`
@@ -247,7 +247,7 @@ Styleguides:
 ├── styles                        # Directory of all globally used common SCSS styles
 ├── utils                         # Directory of re-used helper functions
 │  ├── ArrowKeyNavigation.js      # Functionality for arrow-key navigation
-│  ├── Auth.js                    # Handles all authentication related actions
+│  ├── Auth.js                    # Handles all Authentication related actions
 │  ├── ClickOutside.js            # A directive for detecting click, used to hide dropdown, modal or context menu
 │  ├── ConfigAccumulator.js       # Central place for managing and combining config
 │  ├── ConfigHelpers.js           # Helper functions for managing configuration

@@ -3,14 +3,14 @@
 Welcome to Dashy, so glad you're here :) Deployment is super easy, and there are several methods available depending on what type of system you're using. If you're self-hosting, then deploying with Docker (or similar container engine) is the recommended approach.
 
 #### Quick Start
-If you want to skip the fuss, and [get straight down to it](./docs/quick-start.md), then you can spin up a new instance of Dashy by running:
+If you want to skip the fuss, and [get straight down to it](./docs/Quick-Start.md), then you can spin up a new instance of Dashy by running:
 ```
 docker run -p 8080:80 lissy93/dashy
 ```
 
-See [Management Docs](./docs/management.md) for info about securing, monitoring, updating, health checks, auto starting, web server configuration, etc
+See [Management Docs](./docs/Management.md) for info about securing, monitoring, updating, health checks, auto starting, web server configuration, etc
 
-Once you've got Dashy up and running, you'll want to configure it with your own content, for this you can reference the [configuring docs](./docs/configuring.md).
+Once you've got Dashy up and running, you'll want to configure it with your own content, for this you can reference the [Configuring docs](./docs/Configuring.md).
 
 ## Deployment Methods
 
@@ -120,14 +120,14 @@ If you do not want to use Docker, you can run Dashy directly on your host system
 
 If you don't have a home server, then fear not - Dashy can be deployed to pretty much any cloud provider. The above Docker and NPM guides will work exactly the same on a VPS, but I've also setup some 1-Click deploy links for 10+ of the most common cloud providers, to make things easier. Note that if your instance is exposed to the internet, it will be your responsibility to adequately secure it.
 
-Some hosting providers required a bit of extra configuration, which was why I've made separate branches for deploying to those services (named: [`deploy_cloudflare`](https://github.com/Lissy93/dashy/tree/deploy_cloudflare), [`deploy_digital-ocean`](https://github.com/Lissy93/dashy/tree/deploy_digital-ocean), [`deploy_platform-sh`](https://github.com/Lissy93/dashy/tree/deploy_platform-sh) and [`deploy_render`](https://github.com/Lissy93/dashy/tree/deploy_render)). If there's another cloud service which you'd like 1-click deployment to be supported for, feel free to raise an issue.
+Some hosting providers required a bit of extra configuration, which was why I've made separate branches for deploying to those services (named: [`deploy_cloudflare`](https://github.com/Lissy93/dashy/tree/deploy_cloudflare), [`deploy_digital-ocean`](https://github.com/Lissy93/dashy/tree/deploy_digital-ocean), [`deploy_platform-sh`](https://github.com/Lissy93/dashy/tree/deploy_platform-sh) and [`deploy_render`](https://github.com/Lissy93/dashy/tree/deploy_render)). If there's another cloud service which you'd like 1-click Deployment to be supported for, feel free to raise an issue.
 
 **Note** If you use a static hosting provider, then status checks, writing new config changes to disk from the UI, and triggering a rebuild through the UI will not be availible. This is because these features need endpoints provided by Dashy's local Node server. Everything else should work just the same though.
 
 #### Netlify
 [![Deploy to Netlify](https://i.ibb.co/GtKMysT/deploy-netlify-button.png)](https://app.netlify.com/start/deploy?repository=https://github.com/lissy93/dashy)
 
-[Netlify](https://www.netlify.com/) offers Git-based serverless cloud hosting for web applications. Their services are free to use for personal use, and they support deployment from both public and private repos, as well as direct file upload. The free plan also allows you to use your own custom domain or sub-domain, and is easy to setup.
+[Netlify](https://www.netlify.com/) offers Git-based serverless cloud hosting for web applications. Their services are free to use for personal use, and they support Deployment from both public and private repos, as well as direct file upload. The free plan also allows you to use your own custom domain or sub-domain, and is easy to setup.
 
 To deploy Dashy to Netlify, use the following link
 ```
@@ -196,7 +196,7 @@ https://console.platform.sh/projects/create-project/?template=https://github.com
 #### Render
 [![Deploy to Render](https://i.ibb.co/QXNCbxT/deploy-render-button.png)](https://render.com/deploy?repo=https://github.com/lissy93/dashy/tree/deploy_render)
 
-[Render](https://render.com) is cloud provider that provides easy deployments for static sites, Docker apps, web services, databases and background workers. Render is great for developing applications, and very easy to use. Static sites are free, and services start at $7/month. Currently there are only 2 server locations - Oregon, USA and Frankfurt, Germany. For more info, see the [Render Docs](https://render.com/docs)
+[Render](https://render.com) is cloud provider that provides easy Deployments for static sites, Docker apps, web services, databases and background workers. Render is great for developing applications, and very easy to use. Static sites are free, and services start at $7/month. Currently there are only 2 server locations - Oregon, USA and Frankfurt, Germany. For more info, see the [Render Docs](https://render.com/docs)
 
 To deploy Dashy to Render, use the following link
 ```

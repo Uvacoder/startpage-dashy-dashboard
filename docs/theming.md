@@ -31,7 +31,7 @@ html[data-theme='tiger'] {
 
 Finally, from the UI use the theme dropdown menu to select your new theme, and your styles will be applied.
 
-You can also set `appConfig.theme` to pre-select a default theme, which will be applied immediately after deployment.
+You can also set `appConfig.theme` to pre-select a default theme, which will be applied immediately after Deployment.
 
 ### Modifying Theme Colors
 
@@ -94,7 +94,7 @@ Some UI components have a color option, that can be set in the config file, to f
 
 ### Typography
 
-Essential fonts bundled within the app are located within `./src/assets/fonts/`. All optional fonts that are used by themes are stored in `./public/fonts/`, if you want to add your own font, this is where you should put it. As with assets, if you're using Docker then using a volume to link a directory on your host system with this path within the container will make management much easier.
+Essential fonts bundled within the app are located within `./src/assets/fonts/`. All optional fonts that are used by themes are stored in `./public/fonts/`, if you want to add your own font, this is where you should put it. As with assets, if you're using Docker then using a volume to link a directory on your host system with this path within the container will make Management much easier.
 
 Fonts which are not being used by the current theme are **not** fetched on page load. They are instead only loaded into the application if and when they are required. So having multiple themes with various typefaces shouldn't have any negative impact on performance.
 

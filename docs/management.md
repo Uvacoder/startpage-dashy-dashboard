@@ -18,7 +18,7 @@ The following commands are defined in the [`package.json`](https://github.com/Li
 - **`yarn health-check`** - Checks that the application is up and running on it's specified port, and outputs current status and response times. Useful for integrating into your monitoring service, if you need to maintain high system availability
 - **`yarn build-watch`** - If you find yourself making frequent changes to your configuration, and do not want to have to keep manually rebuilding, then this option is for you. It will watch for changes to any files within the projects root, and then trigger a rebuild. Note that if you are developing new features, then `yarn dev` would be more appropriate, as it's significantly faster at recompiling (under 1 second), and has hot reloading, linting and testing integrated
 - **`yarn build-and-start`** - Builds the app, runs checks and starts the production server. Commands are run in parallel, and so is faster than running them in independently
-- **`yarn pm2-start`** - Starts the Node server using [PM2](https://pm2.keymetrics.io/), a process manager for Node.js applications, that helps them stay alive. PM2 has some built-in basic monitoring features, and an optional [management solution](https://pm2.io/). If you are running the app on bare metal, it is recommended to use this start command
+- **`yarn pm2-start`** - Starts the Node server using [PM2](https://pm2.keymetrics.io/), a process manager for Node.js applications, that helps them stay alive. PM2 has some built-in basic monitoring features, and an optional [Management solution](https://pm2.io/). If you are running the app on bare metal, it is recommended to use this start command
 
 ## Healthchecks
 
@@ -35,7 +35,7 @@ You can view logs for a given Docker container with `docker logs [container-id]`
 You can check the resource usage for your running Docker containers with `docker stats` or `docker stats [container-id]`. For more info, see the [Stats Documentation](https://docs.docker.com/engine/reference/commandline/stats/). There's also [cAdvisor](https://github.com/google/cadvisor), a useful web app for viewing and analyzing resource usage and performance of all your running containers.
 
 #### Management Apps
-You can also view logs, resource usage and other info as well as manage your entire Docker workflow in third-party Docker management apps. For example [Portainer](https://github.com/portainer/portainer) an all-in-one open source management web UI  for Docker and Kubernetes, or [LazyDocker](https://github.com/jesseduffield/lazydocker) a terminal UI for Docker container management and monitoring.
+You can also view logs, resource usage and other info as well as manage your entire Docker workflow in third-party Docker Management apps. For example [Portainer](https://github.com/portainer/portainer) an all-in-one open source Management web UI  for Docker and Kubernetes, or [LazyDocker](https://github.com/jesseduffield/lazydocker) a terminal UI for Docker container Management and monitoring.
 
 #### Advanced Logging and Monitoring
 Docker supports using [Prometheus](https://prometheus.io/) to collect logs, which can then be visualized using a platform like [Grafana](https://grafana.com/). For more info, see [this guide](https://docs.docker.com/config/daemon/prometheus/). If you need to route your logs to a remote syslog, then consider using [logspout](https://github.com/gliderlabs/logspout). For enterprise-grade instances, there are managed services, that make monitoring container logs and metrics very easy, such as [Sematext](https://sematext.com/blog/docker-container-monitoring-with-sematext/) with [Logagent](https://github.com/sematext/logagent-js).
@@ -64,10 +64,10 @@ If you're hosting Dashy behind Cloudflare, then they offer [free and easy SSL](h
 If you're not so comfortable on the command line, then you can use a tool like [SSL For Free](https://www.sslforfree.com/) to generate your Let's Encrypt or ZeroSSL certificate, and support shared hosting servers. They also provide step-by-step tutorials on setting up your certificate on most common platforms. If you are using shared hosting, you may find [this tutorial](https://www.sitepoint.com/a-guide-to-setting-up-lets-encrypt-ssl-on-shared-hosting/) helpful.
 
 #### Authentication
-Dashy has [basic authentication](/docs/authentication.md) built in, however at present this is handled on the front-end, and so where security is critical, it is recommended to use an alternative method. See [here](/docs/authentication.md#alternative-authentication-methods) for options regarding securing Dashy.
+Dashy has [basic Authentication](/docs/Authentication.md) built in, however at present this is handled on the front-end, and so where security is critical, it is recommended to use an alternative method. See [here](/docs/Authentication.md#alternative-Authentication-methods) for options regarding securing Dashy.
 
 
-**[⬆️ Back to Top](#management)**
+**[⬆️ Back to Top](#Management)**
 
 ---
 ## Updating
@@ -105,7 +105,7 @@ For more information, see the [Watchtower Docs](https://containrrr.dev/watchtowe
 4. Re-build: `yarn build`
 5. Start: `yarn start`
 
-**[⬆️ Back to Top](#management)**
+**[⬆️ Back to Top](#Management)**
 
 ---
 
@@ -180,13 +180,13 @@ Then restart Apache, with `sudo systemctl restart apache2`
 8. If you need to change the port, click 'Add environmental variable', give it the name 'PORT', choose a port number and press 'Save'.
 9. Dashy should now be running at your selected path an on a given port
 
-**[⬆️ Back to Top](#management)**
+**[⬆️ Back to Top](#Management)**
 
 ---
 
 ## Authentication
 
-Dashy has built-in authentication and login functionality. However, since this is handled on the client-side, if you are using Dashy in security-critical situations, it is recommended to use an alternate method for authentication, such as [Authelia](https://www.authelia.com/), a VPN or web server and firewall rules. For more info, see **[Authentication Docs](/docs/authentication.md)**.
+Dashy has built-in Authentication and login functionality. However, since this is handled on the client-side, if you are using Dashy in security-critical situations, it is recommended to use an alternate method for Authentication, such as [Authelia](https://www.authelia.com/), a VPN or web server and firewall rules. For more info, see **[Authentication Docs](/docs/Authentication.md)**.
 
 
-**[⬆️ Back to Top](#management)**
+**[⬆️ Back to Top](#Management)**

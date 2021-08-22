@@ -29,7 +29,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`appConfig`** | `object` | _Optional_ | Settings related to how the app functions, including API keys and global styles. See [`appConfig`](#appconfig-optional)
 **`sections`** | `array` | Required | An array of sections, each containing an array of items, which will be displayed as links. See [`section`](#section)
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `PageInfo`
 
@@ -41,7 +41,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`footerText`** | `string` | _Optional_ | Text to display in the footer (note that this will override the default footer content). This can also include HTML and inline CSS
 **`logo`** | `string` | _Optional_ | The path to an image to display in the header (to the right of the title). This can be either local, where `/` is the root of `./public`, or any remote image, such as `https://i.ibb.co/yhbt6CY/dashy.png`. It's recommended to scale your image down, so that it doesn't impact load times
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `pageInfo.navLinks` _(optional)_
 
@@ -50,13 +50,13 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`title`** | `string` |  Required | The text to display on the link button
 **`path`** | `string` | Required | The URL to navigate to when clicked. Can be relative (e.g. `/about`) or absolute (e.g. `https://example.com` or `http://192.168.1.1`)
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `appConfig` _(optional)_
 
 **Field** | **Type** | **Required**| **Description**
 --- | --- | --- | ---
-**`language`** | `string` | _Optional_ | The 2 (or 4-digit) [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for your language, e.g. `en` or `en-GB`. This must be a language that the app has already been [translated](https://github.com/Lissy93/dashy/tree/master/src/assets/locales) into. If your language is unavailable, Dashy will fallback to English. By default Dashy will attempt to auto-detect your language, although this may not work on some privacy browsers.
+**`language`** | `string` | _Optional_ | The 2 (or 4-digit) [ISO 639-1 code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) for your language, e.g. `en` or `en-GB`. This must be a language that the app has already been [translated](https://github.com/Lissy93/dashy/tree/master/src/assets/locales) into. If your language is unavailable, Dashy will fallback to English. By default Dashy will attempt to auto-detect your language, although this may not work on some Privacy--Security browsers.
 **`startingView`** | `enum` | _Optional_ | Which page to load by default, and on the base page or domain root. You can still switch to different views from within the UI. Can be either `default`, `minimal` or `workspace`. Defaults to `default`
 **`statusCheck`** | `boolean` | _Optional_ | When set to `true`, Dashy will ping each of your services and display their status as a dot next to each item. This can be overridden by setting `statusCheck` under each item. Defaults to `false`
 **`statusCheckInterval`** | `boolean` | _Optional_ | The number of seconds between checks. If set to `0` then service will only be checked on initial page load, which is usually the desired functionality. If value is less than `10` you may experience a hit in performance. Defaults to `0`
@@ -64,7 +64,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`enableFontAwesome`** | `boolean` | _Optional_ | Where `true` is enabled, if left blank font-awesome will be enabled only if required by 1 or more icons
 **`fontAwesomeKey`** | `string` | _Optional_ | If you have a font-awesome key, then you can use it here and make use of premium icons. It is a 10-digit alpha-numeric string from you're FA kit URL  (e.g. `13014ae648`)
 **`faviconApi`** | `enum` | _Optional_ | Only applicable if you are using favicons for item icons. Specifies which service to use to resolve favicons. Set to `local` to do this locally, without using an API. Services running locally will use this option always. Available options are: `local`, `faviconkit`, `google`, `clearbit`, `webmasterapi` and `allesedv`. Defaults to `faviconkit`. See [Icons](/docs/icons.md#favicons) for more info
-**`auth`** | `array` | _Optional_ | An array of objects containing usernames and hashed passwords. If this is not provided, then authentication will be off by default, and you will not need any credentials to access the app. Note authentication is done on the client side, and so if your instance of Dashy is exposed to the internet, it is recommend to configure your web server to handle this. See [`auth`](#appconfigauth-optional)
+**`auth`** | `array` | _Optional_ | An array of objects containing usernames and hashed passwords. If this is not provided, then Authentication will be off by default, and you will not need any credentials to access the app. Note Authentication is done on the client side, and so if your instance of Dashy is exposed to the internet, it is recommend to configure your web server to handle this. See [`auth`](#appconfigauth-optional)
 **`layout`** | `enum` | _Optional_ | App layout, either `horizontal`, `vertical`, `auto` or `sidebar`. Defaults to `auto`. This specifies the layout and direction of how sections are positioned on the home screen. This can also be modified from the UI.
 **`iconSize`** | `enum` | _Optional_ | The size of link items / icons. Can be either `small`, `medium,` or `large`. Defaults to `medium`. This can also be set directly from the UI.
 **`theme`** | `string` | _Optional_ | The default theme for first load (you can change this later from the UI)
@@ -74,14 +74,14 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`customCss`** | `string` | _Optional_ | Raw CSS that will be applied to the page. This can also be set from the UI. Please minify it first.
 **`hideComponents`** | `object` | _Optional_ | A list of key page components (header, footer, search, settings, etc) that are present by default, but can be removed using this option. See [`appConfig.hideComponents`](#appconfighideComponents-optional)
 **`enableMultiTasking`** | `boolean` | _Optional_ | If set to true, will keep apps open in the background when in the workspace view. Useful for quickly switching between multiple sites, and preserving their state, but comes at the cost of performance.
-**`allowConfigEdit`** | `boolean` | _Optional_ | Should prevent / allow the user to write configuration changes to the conf.yml from the UI. When set to `false`, the user can only apply changes locally using the config editor within the app, whereas if set to `true` then changes can be written to disk directly through the UI. Defaults to `true`. Note that if authentication is enabled, the user must be of type `admin` in order to apply changes globally.
+**`allowConfigEdit`** | `boolean` | _Optional_ | Should prevent / allow the user to write configuration changes to the conf.yml from the UI. When set to `false`, the user can only apply changes locally using the config editor within the app, whereas if set to `true` then changes can be written to disk directly through the UI. Defaults to `true`. Note that if Authentication is enabled, the user must be of type `admin` in order to apply changes globally.
 **`enableErrorReporting`** | `boolean` | _Optional_ | Enable reporting of unexpected errors and crashes. This is off by default, and **no data will ever be captured unless you explicitly enable it**. Turning on error reporting helps previously unknown bugs get discovered and fixed. Dashy uses [Sentry](https://github.com/getsentry/sentry) for error reporting. Defaults to `false`.
 **`sentryDsn`** | `boolean` | _Optional_ | If you need to monitor errors in your instance, then you can use Sentry to collect and process bug reports. Sentry can be self-hosted, or used as SaaS, once your instance is setup, then all you need to do is pass in the DSN here, and enable error reporting. You can learn more on the [Sentry DSN Docs](https://docs.sentry.io/product/sentry-basics/dsn-explainer/). Note that this will only ever be used if `enableErrorReporting` is explicitly enabled.
 **`disableUpdateChecks`** | `boolean` | _Optional_ | If set to true, Dashy will not check for updates. Defaults to `false`.
 **`disableServiceWorker`** | `boolean` | _Optional_ | Service workers cache web applications to improve load times and offer basic offline functionality, and are enabled by default in Dashy. The service worker can sometimes cause older content to be cached, requiring the app to be hard-refreshed. If you do not want SW functionality, or are having issues with caching, set this property to `true` to disable all service workers.
 **`disableContextMenu`** | `boolean` | _Optional_ | If set to `true`, the custom right-click context menu will be disabled. Defaults to `false`.
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `appConfig.auth` _(optional)_
 
@@ -91,7 +91,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`hash`** | `string` | Required | A SHA-256 hashed password
 **`type`** | `string` | _Optional_ | The user type, either admin or normal
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `appConfig.hideComponents` _(optional)_
 
@@ -104,7 +104,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`hideFooter`** | `boolean` | _Optional_ | If set to `true`, the footer will not be visible. Defaults to `false`
 **`hideSplashScreen`** | `boolean` | _Optional_ | If set to `true`, splash screen will not be visible while the app loads. Defaults to `true` (except on first load, when the loading screen is always shown)
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `section`
 
@@ -115,7 +115,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`items`** | `array` | Required | An array of items to be displayed within the section. See [`item`](#sectionitem)
 **`displayData`** | `object` | _Optional_ | Meta-data to optionally overide display settings for a given section. See [`displayData`](#sectiondisplaydata-optional)
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `section.item`
 
@@ -133,7 +133,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`color`** | `string` | _Optional_ | An optional color for the text and font-awesome icon to be displayed in. Note that this will override the current theme and so may not display well
 **`backgroundColor`** | `string` | _Optional_ | An optional background fill color for the that given item. Again, this will override the current theme and so might not display well against the background
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `section.displayData` _(optional)_
 
@@ -149,7 +149,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 **`itemCountX`** | `number` | _Optional_ | The number of items to display per row / horizontally. If not set, it will be calculated automatically based on available space. Can only be set if `sectionLayout` is set to `grid`. Must be a whole number between `1` and `12`
 **`itemCountY`** | `number` | _Optional_ | The number of items to display per column / vertically. If not set, it will be calculated automatically based on available space. If `itemCountX` is set, then `itemCountY` can be calculated automatically. Can only be set if `sectionLayout` is set to `grid`. Must be a whole number between `1` and `12`
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### `section.icon` and `section.item.icon`
 
@@ -157,7 +157,7 @@ To disallow any changes from being written to disk via the UI config editor, set
 --- | --- | --- | ---
 **`icon`** | `string` | _Optional_ | The icon for a given item or section. Can be a font-awesome icon, favicon, remote URL or local URL. If set to `favicon`, the icon will be automatically fetched from the items website URL. To use font-awesome, specify the category, followed by the icon name, e.g. `fas fa-rocket`, `fab fa-monero` or `fal fa-duck` - note that to use pro icons, you mut specify `appConfig.fontAwesomeKey`. Similarly, you can also use [simple-icons](https://simpleicons.org/) by setting icon to `si-[icon-name]` or [material-design-icons](https://dev.materialdesignicons.com/icons) by setting icon to `mdi-[icon-name]`. If set to `generative`, then a unique icon is generated from the apps URL or IP. You can also use hosted any by specifying it's URL, e.g. `https://i.ibb.co/710B3Yc/space-invader-x256.png`. To use a local image, first store it in `./public/item-icons/` (or `-v /app/public/item-icons/` in Docker) , and reference it by name and extension - e.g. set `image.png` to use `./public/item-icon/image.png`, you can also use sub-folders if you have a lot of icons, to keep them organised.
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 
 ### Example
 
@@ -196,5 +196,5 @@ If you need any help, feel free to [Raise an Issue](https://github.com/Lissy93/d
 
 Happy Configuring 🤓🔧
 
-**[⬆️ Back to Top](#configuring)**
+**[⬆️ Back to Top](#Configuring)**
 

@@ -54,7 +54,7 @@ By default, the status checker will use the URL of each application being checke
 You can set the `statusCheckUrl` property on any given item in order to do this. The status checker will then ping that endpoint, instead of the apps main `url` property.
 
 ## Setting Custom Headers
-If your service is responding with an error, despite being up and running, it is most likely because custom headers for authentication, authorization or encoding are required. You can define these headers under the `statusCheckHeaders` property for any service. It should be defined as an object format, with the name of header as the key, and header content as the value.
+If your service is responding with an error, despite being up and running, it is most likely because custom headers for Authentication, authorization or encoding are required. You can define these headers under the `statusCheckHeaders` property for any service. It should be defined as an object format, with the name of header as the key, and header content as the value.
 For example, `statusCheckHeaders: { 'X-Custom-Header': 'foobar' }`
 
 ## Troubleshooting Failing Status Checks
@@ -65,7 +65,7 @@ If you are still having issues, it may be because your target application is blo
 Access-Control-Allow-Origin: https://location-of-dashy/
 Vary: Origin
 ```
-For further troubleshooting, use an application like [Postman](https://postman.com) to diagnose the issue.
+For further Troubleshooting, use an application like [Postman](https://postman.com) to diagnose the issue.
 
 ## How it Works
 
@@ -73,4 +73,4 @@ When Dashy is loaded, items with `statusCheck` enabled will make a request, to `
 
 When the response completes, an indicator will display next to each item. The color denotes the status: Yellow while waiting for the response to return, green if request was successful, red if it failed, and grey if it was unable to make the request all together.
 
-All requests are made straight from your server, there is no intermediary. So providing you are hosting Dashy yourself, and are checking the status of other self-hosted services, there shouldn't be any privacy concerns. Requests are made asynchronously, so this won't have any impact on page load speeds. However recurring requests (using `statusCheckInterval`) may run more slowly if the interval between requests is very short.
+All requests are made straight from your server, there is no intermediary. So providing you are hosting Dashy yourself, and are checking the status of other self-hosted services, there shouldn't be any Privacy--Security concerns. Requests are made asynchronously, so this won't have any impact on page load speeds. However recurring requests (using `statusCheckInterval`) may run more slowly if the interval between requests is very short.

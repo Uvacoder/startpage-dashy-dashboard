@@ -7,7 +7,7 @@ pageInfo:
   - title: About
     path: /about
   - title: Source Code
-    path: https://github.com/Lissy93/dashy
+    path: https://github.com/uvacoder/dashy
 appConfig:
   theme: colorful
   fontAwesomeKey: 0821c65656

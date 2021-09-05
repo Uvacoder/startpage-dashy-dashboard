@@ -19,7 +19,7 @@ Once you've got Dashy configured to your preference, open the Backup & Restore m
 ### Restoring a Backup
 To restore a backup, navigate to the Backup & Restore menu, and under restore, enter your backup ID, and the password you chose. Your config file will be downloaded, decrypted and applied to local storage. 
 
-### Privacy--Security & Security
+### Privacy--Security--Security--Security & Security
 
 Data is only ever sent to the cloud when the user actively triggers a backup. All transmitted data is first encrypted using [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard). Your selected password never leaves your device, and is hashed before being compared. It is only possible to restore a configuration if you have both the backup ID and decryption password.
 

@@ -30,4 +30,22 @@ sections:
     description: 'Live Demo #2'
     icon: fad fa-planet-ringed
     url: https://dashy-demo-2.netlify.app 
+- name: Homepages
+  items:
+  - title: GitHub
+    description: My GitHub Account
+    icon: fab fa-github
+    url: https://github.com/uvacoder
+  - title: Codepen
+    description: My Codepen Account
+    icon: fas fa-codepen
+    url: https://codepen.io/uvacoder
+  - title: Demo 3
+    description: 'Live Demo #3'
+    icon: far fa-rocket
+    url: https://dashy-seven.vercel.app/#/ 
+  - title: Demo 4
+    description: 'Live Demo #4'
+    icon: fad fa-planet-ringed
+    url: https://dashy-demo-2.netlify.app 
   

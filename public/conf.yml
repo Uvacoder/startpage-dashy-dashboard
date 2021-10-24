@@ -30,7 +30,6 @@ sections:
     description: 'Live Demo #2'
     icon: fad fa-planet-ringed
     url: https://dashy-demo-2.netlify.app 
-sections:
 - name: Homepages
   items:
   - title: GitHub
